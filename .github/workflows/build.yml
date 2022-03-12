@@ -22,7 +22,11 @@ jobs:
   build:
     runs-on: ubuntu-latest
     container:
+<<<<<<< HEAD
       image: zmkfirmware/zmk-build-arm:2.5
+=======
+      image: zmkfirmware/zmk-build-arm:stable
+>>>>>>> 5fa0749 (Initial User Config.)
     needs: matrix
     name: Build
     strategy:
