@@ -111,8 +111,6 @@
                       &trans &trans &trans         &trans &trans   &trans
                         >;
                 };
-        };
-
                 media_layer {
                         label = "MEDIA";
 // -----------------------------------------------------------------------------------------
@@ -127,4 +125,6 @@
                                             &trans       &trans       &trans         &trans &trans &trans
                         >;
                 };
+        };
+
 };
