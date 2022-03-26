@@ -27,25 +27,41 @@
                         label = "desktop";
                         compatible = "zmk,behavior-macro";
                         #binding-cells = <0>;
-                        bindings = <&macro_tap &kp LCTRL &kp F1>;
+                        bindings
+                                = <&macro_press &kp LCTRL>
+                                , <&macro_tap &kp F1>
+                                , <&macro_release &kp LCTRL>
+                                ;
                 };
                 onepass: onepass {
                         label = "onepass";
                         compatible = "zmk,behavior-macro";
                         #binding-cells = <0>;
-                        bindings = <&macro_tap &kp LGUI &kp BSLH>;
+                        bindings
+                                = <&macro_press &kp LGUI>
+                                , <&macro_tap &kp BSLH>
+                                , <&macro_release &kp LGUI>
+                                ;
                 };
                 tabright: tabright {
                         label = "tabright";
                         compatible = "zmk,behavior-macro";
                         #binding-cells = <0>;
-                        bindings = <&macro_tap &kp LGUI &kp RBKT>;
+                        bindings
+                                = <&macro_press &kp LGUI>
+                                , <&macro_tap &kp RBKT>
+                                , <&macro_release &kp LGUI>
+                                ;
                 };
                 tableft: tableft {
                         label = "tableft";
                         compatible = "zmk,behavior-macro";
                         #binding-cells = <0>;
-                        bindings = <&macro_tap &kp LGUI &kp LBKT>;
+                        bindings
+                                = <&macro_press &kp LGUI>
+                                , <&macro_tap &kp LBKT>
+                                , <&macro_release &kp LGUI>
+                                ;
                 };
         };
 
