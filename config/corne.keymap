@@ -69,11 +69,6 @@
                 compatible = "zmk,keymap";
 
                 DEFAULT {
-// -----------------------------------------------------------------------------------------
-// |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
-// | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
-// | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ENT  |
-//                    | ALT | GUI | MO1 |   | MO2 | SPC  | GUI |
                         bindings = <
    &kp TAB   &kp Q &kp W &kp E &kp R &kp T      &kp Y   &kp U  &kp I     &kp O   &kp P    &kp BSPC
    &kp LCTRL &kp A &kp S &kp D &kp F &kp G      &kp H   &kp J  &kp K     &kp L   &kp SEMI &kp SQT
@@ -83,11 +78,6 @@
                 };
                 num_layer {
                         label = "NUM";
-// -----------------------------------------------------------------------------------------
-// |  ESC |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
-// |   ▽  |     |     |     |     |     |   | - _ | = + | \ | | [ { | ] } | ` ~  |
-// |   ▽  |     |     |     | SPC |     |   |  _  |  +  |  |  |  {  |  }  |  ~   |
-//                    |  ▽  |  ▽  |  ▽  |   |     |  ▽  |  ▽  |
                         bindings = <
    &kp ESC  &kp N1  &kp N2  &kp N3    &kp N4    &kp N5     &kp N6    &kp N7    &kp N8   &kp N9         &kp N0          &kp BSPC
    &trans   &none   &none   &none     &none     &none      &kp MINUS &kp EQUAL &kp BSLH &kp LBKT       &kp RBKT        &kp GRAVE
@@ -99,11 +89,6 @@
 
                 nav_layer {
                         label = "NAV";
-// -----------------------------------------------------------------------------------------
-// |   ▽  |     |     |     |     |     |   |     |     |  UP |     |     |   ▽  |
-// |   ▽  |     |     |     |     |     |   |     | LFT | DWN | RGT |     |      |
-// |   ▽  |     |     |     |     |     |   |     |     |     |     |     |   ▽  |
-//                    |  ▽  |  ▽  | MO3 |   |  ▽  |  ▽  |  ▽  |
                         bindings = <
    &trans &none &none &none  &none  &none          &none  &tableft &kp UP   &tabright &none &trans
    &trans &none &none &none  &none  &none          &none  &kp LEFT &kp DOWN &kp RIGHT &none &none
@@ -113,15 +98,10 @@
                 };
                 media_layer {
                         label = "MEDIA";
-// -----------------------------------------------------------------------------------------
-// | BTCLR| BT1  | BT2  | BT3 | BT4 | BT5 |   |     |     |     |     |     |      |
-// | Vol- | Vol+ | MUTE |     |     |     |   |     |     |     |     |     |      |
-// | Prev | Play | NEXT |     |     |     |   |     |     |     |     |     |      |
-//                      |  ▽  |  ▽  |  ▽  |   |  ▽  |  ▽  |  ▽  |
                         bindings = <
-   &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1     &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &none  &none  &none &none &none &none
+   &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1     &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &none  &none  &none &none &none &trans
    &none      &kp C_VOL_DN &kp C_VOL_UP     &kp K_MUTE   &none        &none          &none  &none  &none &none &none &none
-   &none      &kp C_PREV   &kp C_PLAY_PAUSE &kp C_NEXT   &none        &none          &kp UP &none  &none &none &none &none
+   &trans     &kp C_PREV   &kp C_PLAY_PAUSE &kp C_NEXT   &none        &none          &kp UP &none  &none &none &none &trans
                                             &trans       &trans       &trans         &trans &trans &trans
                         >;
                 };
