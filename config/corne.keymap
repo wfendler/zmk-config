@@ -14,13 +14,13 @@
 #define MEDIA 3
 
 / {
-        conditional_layers {
-            compatible = "zmk,conditional-layers";
-            config_from_default {
-                if-layers = <NUM NAV>;
-                then-layer = <MEDIA>;
-            };
-        };
+        // conditional_layers {
+        //     compatible = "zmk,conditional-layers";
+        //     config_from_default {
+        //         if-layers = <NUM NAV>;
+        //         then-layer = <MEDIA>;
+        //     };
+        // };
 
         macros {
                 desktop: desktop {
@@ -48,9 +48,9 @@
                         compatible = "zmk,behavior-macro";
                         #binding-cells = <0>;
                         bindings
-                                = <&macro_press &kp LGUI>
+                                = <&macro_press &kp LGUI &kp LSHFT>
                                 , <&macro_tap &kp RBKT>
-                                , <&macro_release &kp LGUI>
+                                , <&macro_release &kp LGUI &kp LSHFT>
                                 ;
                 };
                 tableft: tableft {
@@ -58,9 +58,9 @@
                         compatible = "zmk,behavior-macro";
                         #binding-cells = <0>;
                         bindings
-                                = <&macro_press &kp LGUI>
+                                = <&macro_press &kp LGUI &kp LSHFT>
                                 , <&macro_tap &kp LBKT>
-                                , <&macro_release &kp LGUI>
+                                , <&macro_release &kp LGUI &kp LSHFT>
                                 ;
                 };
         };
@@ -81,7 +81,8 @@
                    &kp LALT &kp LGUI &mo NUM    &mo NAV &kp SPACE &kp RGUI
                         >;
                 };
-                LAYER_1 {
+                num_layer {
+                        label = "NUM";
 // -----------------------------------------------------------------------------------------
 // |  ESC |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
 // |   ▽  |     |     |     |     |     |   | - _ | = + | \ | | [ { | ] } | ` ~  |
@@ -96,22 +97,24 @@
                 };
 
 
-                LAYER_2 {
+                nav_layer {
+                        label = "NAV";
 // -----------------------------------------------------------------------------------------
 // |   ▽  |     |     |     |     |     |   |     |     |  UP |     |     |   ▽  |
 // |   ▽  |     |     |     |     |     |   |     | LFT | DWN | RGT |     |      |
 // |   ▽  |     |     |     |     |     |   |     |     |     |     |     |   ▽  |
 //                    |  ▽  |  ▽  | MO3 |   |  ▽  |  ▽  |  ▽  |
                         bindings = <
-   &trans &none &none &none  &none  &none          &trans  &tableft &kp UP   &tabright &none &trans
-   &trans &none &none &none  &none  &none          &trans  &kp LEFT &kp DOWN &kp RIGHT &none &none
-   &trans &none &none &none  &none  &none          &trans  &none    &none    &none     &none &trans
-                      &trans &trans &trans         &trans  &trans   &trans
+   &trans &none &none &none  &none  &none          &none  &tableft &kp UP   &tabright &none &trans
+   &trans &none &none &none  &none  &none          &none  &kp LEFT &kp DOWN &kp RIGHT &none &none
+   &trans &none &none &none  &none  &none          &none  &none    &none    &none     &none &trans
+                      &trans &trans &trans         &trans &trans   &trans
                         >;
                 };
         };
 
-                LAYER_3 {
+                media_layer {
+                        label = "MEDIA";
 // -----------------------------------------------------------------------------------------
 // | BTCLR| BT1  | BT2  | BT3 | BT4 | BT5 |   |     |     |     |     |     |      |
 // | Vol- | Vol+ | MUTE |     |     |     |   |     |     |     |     |     |      |
