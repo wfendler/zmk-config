@@ -14,13 +14,13 @@
 #define MEDIA 3
 
 / {
-        // conditional_layers {
-        //     compatible = "zmk,conditional-layers";
-        //     config_from_default {
-        //         if-layers = <NUM NAV>;
-        //         then-layer = <MEDIA>;
-        //     };
-        // };
+        conditional_layers {
+            compatible = "zmk,conditional-layers";
+            config_from_default {
+                if-layers = <NUM NAV>;
+                then-layer = <MEDIA>;
+            };
+        };
 
         macros {
                 desktop: desktop {
